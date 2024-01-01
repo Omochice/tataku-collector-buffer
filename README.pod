@@ -1,0 +1,73 @@
+---
+name: tataku-collector-buffer
+description: The collector module for tataku.vim
+--
+
+=pod
+
+=head1 tataku-collector-buffer X<tataku-collector-buffer>
+
+The collector module for tataku.vim.
+
+This collect from specified buffer.
+
+=head2 Contents X<tataku-collector-buffer-contents>
+
+=over 0
+
+=item * L<tataku-collector-buffer-dependencies>
+
+=item * L<tataku-collector-buffer-options>
+
+=item * L<tataku-collector-buffer-samples>
+
+=back
+
+=head2 Dependencies X<tataku-collector-buffer-dependencies>
+
+This plugin needs:
+
+=over 0
+
+=item * L<denops.vim|https://github.com/vim-denops/denops.vim>
+
+=item * L<tataku.vim|https://github.com/Omochice/tataku.vim>
+
+=back
+
+=head2 Options X<tataku-collector-buffer-options>
+
+This module have some options:
+
+=over 0
+
+=item * C<bufname> X<tataku-collector-buffer-option-bufname>
+
+  Used as argument of L<bufnr>.
+  Default: C<""> (current buffer)
+
+=item * C<start> X<tataku-collector-buffer-options-start>
+
+  Start line number to collect lines.
+  Default: C<1>
+
+=item * C<end> X<tataku-collector-buffer-options-end>
+
+  Start line number to collect lines.
+  Default: C<"$">
+
+=back
+
+=head2 Samples X<tataku-collector-buffer-samples>
+
+=begin vim
+
+let g:tataku_recipes = #{
+  \   sample: #{
+  \     collector: #{ name: 'buffer', options: { bufname: '', start: 1, end: '$' } }
+  \   }
+  \ }
+
+=end vim
+
+=cut

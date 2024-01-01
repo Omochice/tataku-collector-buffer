@@ -36,7 +36,6 @@ const collector = (denops: Denops, option: unknown) => {
       }
       const lines = await fn.getbufline(denops, bufnr, opt.start, opt.end);
       controller.enqueue(lines.map((line) => `${line}\n`));
-      controller.close();
     },
   });
 };

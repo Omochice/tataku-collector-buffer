@@ -4,7 +4,7 @@ import {
   assert,
   is,
   PredicateType,
-} from "https://deno.land/x/unknownutil@v3.14.0/mod.ts";
+} from "https://deno.land/x/unknownutil@v3.14.1/mod.ts";
 
 const isOption = is.ObjectOf({
   // fn.BufNameArg

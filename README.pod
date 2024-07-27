@@ -64,7 +64,10 @@ This module have some options:
 
 let g:tataku_recipes = #{
   \   sample: #{
-  \     collector: #{ name: 'buffer', options: { bufname: '', start: 1, end: '$' } }
+  \     collector: #{
+  \       name: 'buffer',
+  \       options: { bufname: '', start: 1, end: '$' }
+  \     },
   \   }
   \ }
 

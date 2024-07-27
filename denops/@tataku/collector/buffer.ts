@@ -1,5 +1,5 @@
-import { Denops } from "https://deno.land/x/denops_std@v6.5.1/mod.ts";
-import * as fn from "https://deno.land/x/denops_std@v6.5.1/function/mod.ts";
+import { Denops } from "jsr:@denops/std@7.0.0";
+import * as fn from "jsr:@denops/std@7.0.0/function";
 import { assert, is, PredicateType } from "jsr:@core/unknownutil@3.18.1";
 
 const isOption = is.ObjectOf({

@@ -1,6 +1,6 @@
 import { Denops } from "jsr:@denops/std@7.0.3";
 import * as fn from "jsr:@denops/std@7.0.3/function";
-import { assert, is, PredicateType } from "jsr:@core/unknownutil@3.18.1";
+import { assert, is, PredicateType } from "jsr:@core/unknownutil@4.0.3";
 
 const isOption = is.ObjectOf({
   // fn.BufNameArg

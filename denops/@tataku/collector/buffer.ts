@@ -1,5 +1,5 @@
-import { Denops } from "jsr:@denops/std@7.0.3";
-import * as fn from "jsr:@denops/std@7.0.3/function";
+import { Denops } from "jsr:@denops/std@7.1.1";
+import * as fn from "jsr:@denops/std@7.1.1/function";
 import {
   as,
   assert,

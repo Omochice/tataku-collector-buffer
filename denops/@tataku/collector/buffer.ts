@@ -6,6 +6,7 @@ import {
   is,
   type PredicateType,
 } from "jsr:@core/unknownutil@4.3.0";
+import type { CollectorFactory } from "jsr:@omochice/tataku-vim@1.1.0";
 
 const isOption = is.ObjectOf({
   // fn.BufNameArg
@@ -22,7 +23,7 @@ const defaultOption: Required<PredicateType<typeof isOption>> = {
   end: "$",
 } as const;
 
-const collector = (denops: Denops, option: unknown) => {
+const collector: CollectorFactory = (denops: Denops, option: unknown) => {
   assert(option, isOption);
   const opt = { ...defaultOption, ...option };
   return new ReadableStream<string[]>({

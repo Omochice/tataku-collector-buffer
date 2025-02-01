@@ -6,7 +6,7 @@ import {
   is,
   type PredicateType,
 } from "jsr:@core/unknownutil@4.3.0";
-import type { CollectorFactory } from "jsr:@omochice/tataku-vim@1.1.0";
+import type { CollectorFactory } from "jsr:@omochice/tataku-vim@1.2.1";
 
 const isOption = is.ObjectOf({
   // fn.BufNameArg

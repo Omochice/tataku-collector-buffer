@@ -29,16 +29,20 @@ const collector: CollectorFactory = (denops: Denops, option: unknown) => {
   return new ReadableStream<string[]>({
     start: async (controller: ReadableStreamDefaultController<string[]>) => {
       const bufnr = await fn.bufnr(denops, opt.bufname);
+      using _ = {
+        [Symbol.dispose]: () => {
+          controller.close();
+        },
+      };
       if (bufnr === -1) {
         const err = new Error(
           `buffer (${opt.bufname}) is seems like not existed.`,
         );
         controller.error(err);
-        throw err;
+        return;
       }
       const lines = await fn.getbufline(denops, bufnr, opt.start, opt.end);
       controller.enqueue(lines.map((line) => `${line}\n`));
-      controller.close();
     },
   });
 };

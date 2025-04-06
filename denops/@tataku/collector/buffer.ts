@@ -17,11 +17,11 @@ const isOption = is.ObjectOf({
   end: as.Optional(is.UnionOf([is.Number, is.LiteralOf("$")])),
 });
 
-const defaultOption: Required<PredicateType<typeof isOption>> = {
+const defaultOption = {
   bufname: "",
   start: 1,
   end: "$",
-} as const;
+} as const satisfies Required<PredicateType<typeof isOption>>;
 
 const collector: CollectorFactory = (denops: Denops, option: unknown) => {
   assert(option, isOption);
